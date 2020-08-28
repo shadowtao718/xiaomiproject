@@ -1,0 +1,388 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.site-header {
+	font-size: 12px;
+	height: 100px;
+	border-bottom: 2px solid #ff6700;
+	background-color: #fff;
+	color: #b0b0b0;
+}
+
+.container {
+	position: relative;
+	width: 1226px;
+	margin: 0 auto;
+}
+
+/* logo */
+.header-logo {
+	width: 93px;
+	margin-top: 26px;
+	float: left;
+}
+
+.header-logo .logo {
+	position: relative;
+	display: block;
+	width: 48px;
+	height: 48px;
+	background-color: #ff6700;
+	overflow: hidden;
+}
+
+.header-logo .logo::before {
+	position: absolute;
+	left: 0;
+	width: 48px;
+	height: 48px;
+	content: "";
+	background: url(../img/mi-logo.png) no-repeat 50% 50%;
+	transition: all 0.2s;
+}
+
+.header-logo .logo::after {
+	position: absolute;
+	left: -48px;
+	width: 48px;
+	height: 48px;
+	content: "";
+	background: url(../img/mi-home.png) no-repeat 50% 50%;
+	transition: all 0.2s;
+}
+
+.header-logo .logo:hover::after {
+	transform: translate(48px, 0);
+}
+
+.header-logo .logo:hover::before {
+	transform: translate(48px, 0);
+}
+
+.header-title {
+	height: 48px;
+	float: left;
+	margin-top: 26px;
+}
+
+.header-title h2 {
+	float: left;
+	color: #424242;
+	line-height: 48px;
+	margin-bottom: 0;
+	margin-top: 0;
+	font-size: 28px;
+	font-weight: normal;
+}
+
+.header-title p {
+	float: left;
+	line-height: 20px;
+	margin-left: 16px;
+	margin-top: 20px;
+	color: #757575;
+}
+
+/* 购物车列表样式 */
+.cart-main {
+	padding-top: 30px;
+	background-color: #f5f5f5;
+	padding-bottom: 30px;
+}
+
+/* 购物车头部 */
+.list-head {
+	height: 70px;
+	line-height: 70px;
+	color: #424242;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.cart-goods-list {
+	background-color: #fff;
+}
+
+.cart-goods-list .col-check {
+	width: 100px;
+}
+
+.cart-goods-list .col-check .cart-checkbox {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 24px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.cart-goods-list .col-img {
+	width: 120px;
+}
+
+.cart-goods-list .col-name {
+	width: 380px;
+}
+
+.cart-goods-list .col-price {
+	width: 140px;
+	text-align: center;
+}
+
+.cart-goods-list .col-num {
+	width: 150px;
+	text-align: center;
+}
+
+.cart-goods-list .col-total {
+	width: 120px;
+	text-align: right;
+	padding-right: 80px;
+}
+
+.cart-goods-list .col-action {
+	width: 80px;
+	text-align: center;
+}
+
+/* 购物车商品列表 */
+/* .cart-goods-list .list-body .col{
+	float: left;
+} */
+.item-box {
+	height: 100px;
+	padding: 15px 24px 15px 0;
+	border-top: 1px solid #e0e0e0;
+}
+
+.item-box .item-row {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.item-box .col-img img {
+	width: 80px;
+	height: 80px;
+}
+
+.item-box .goods-name {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: normal;
+	/* 如果名称很长显示... */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.item-box .goods-name a {
+	color: #424242;
+}
+
+.item-box .col-price {
+	padding-right: 18px;
+	text-align: center;
+	color: #424242;
+}
+
+/* 修改购物车数量的样式 */
+.change-goods-num {
+	width: 148px;
+	height: 38px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+	background-color: #fff;
+	position: relative;
+}
+
+.change-goods-num a {
+	float: left;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	color: #757575;
+	font-size: 20px;
+}
+
+.change-goods-num input {
+	float: left;
+	width: 72px;
+	height: 38px;
+	line-height: 38px;
+	padding: 0;
+	border-width: 0;
+	color: #424242;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* input 聚焦时去掉默认蓝色边框 */
+.change-goods-num input:focus {
+	border: none;
+	outline: none;
+}
+
+.item-box .col-total {
+	color: #ff6700;
+	font-size: 16px;
+}
+
+/* 删除操作 */
+.cart-goods-list .del-goods {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/del-icon.png) center center no-repeat;
+	background-size: 20px 20px;
+}
+
+.cart-goods-list .del-goods:hover {
+	width: 30px;
+	height: 30px;
+	background: url(../img/del-hover.png) center center no-repeat;
+	background-size: 30px 30px;
+}
+
+/* 购物车结算 */
+.cart-bar {
+	height: 50px;
+	text-align: right;
+	background-color: #fff;
+	margin-top: 20px;
+}
+
+.cart-bar .section-left {
+	float: left;
+}
+
+.section-left .back-shopping {
+	line-height: 50px;
+	margin-left: 30px;
+	color: #757575;
+}
+
+.section-left .cart-total {
+	margin-left: 16px;
+	padding-left: 16px;
+	border-left: 1px solid #eee;
+	color: #757575;
+}
+
+.section-left .cart-total i {
+	font-style: normal;
+	color: #ff6700;
+	margin: 0 5px;
+}
+
+.cart-bar .total-price {
+	padding-left: 13px;
+	color: #ff6700;
+}
+
+.cart-bar .total-price em {
+	font-size: 30px;
+	font-style: normal;
+}
+
+.cart-bar .btn {
+	display: inline-block;
+	width: 200px;
+	height: 48px;
+	line-height: 48px;
+	font-size: 18px;
+	text-align: center;
+	margin-left: 50px;
+	vertical-align: top;
+	background-color: #ff6700;
+	color: #fff;
+}
+
+/* 遮罩层 */
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1000px;
+	background-color: rgba(101, 101, 101, 0.5);
+	z-index: 9999;
+	display: none;
+}
+
+.mask-container {
+	position: relative;
+	width: 500px;
+	height: 270px;
+	margin: 160px auto 0 auto;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+
+.mask-content {
+	padding: 60px 40px;
+}
+
+.mask-container .title {
+	font-size: 27px;
+	font-weight: 400;
+	line-height: 50px;
+	color: #424242;
+	min-height: 130px;
+}
+
+.mask-container .close-popup {
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 25px;
+	height: 25px;
+	background: url(../img/del-icon.png) center center no-repeat;
+	background-size: 25px 25px;
+	cursor: pointer;
+}
+
+.mask-container .close-popup:hover {
+	background: url(../img/del-hover.png) center center no-repeat;
+	background-size: 25px 25px;
+}
+
+.mask-container .btn {
+	display: inline-block;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	background: #b0b0b0;
+	color: #fff;
+	font-size: 16px;
+}
+
+.mask-container .btn.popup-true {
+	margin-left: 15px;
+	background: #ff6700;
+	border-color: #ff6700;
+}
+
+.mask-container .btn.popup-false:hover {
+	background-color: #757575;
+	border-color: #757575;
+}
+
+.mask-container .btn.popup-true:hover {
+	background-color: #f25807;
+	border-color: #f25807;
+}
